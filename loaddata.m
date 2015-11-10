@@ -1,4 +1,6 @@
- function res = loaddata(filename,ncols,commentsign) %(filename)
+%addpath(/measured_spectra) 
+
+function res = loaddata(filename,ncols,commentsign) %(filename)
 % loads ASCII-file in a data matrix with
 % ncols: number of colums
 % commentsdign: sign for headerinfo
@@ -9,7 +11,6 @@
 % The measured_spectra folder is added to the path, otherwise it does not
 % work
 
-addpath(measured_spectra)
 
 fin = fopen(filename,'r'); % open file with error handling 
 if fin < 0
